@@ -817,5 +817,7 @@ function block_elisadmin_create_instance() {
     // Force location
     $block_instance_record->defaultregion = 'side-pre';
     $block_instance_record->defaultweight = -999;
+    $block_instance_record->timecreated = time();
+    $block_instance_record->timemodified = $block_instance_record->timecreated;
     $DB->insert_record('block_instances', $block_instance_record);
 }
